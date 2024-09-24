@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;800;900&display=swap');
+
+/* Universal Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; /* Updated font */
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #001f3f; /* Dark blue background */
+}
+
+/* Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px; /* Reduced margin for better responsiveness */
+    max-width: 600px; /* Set max width for smaller screens */
+    background-image: linear-gradient(120deg, #84fab0, #8fd3f4); /* Gradient background */
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Added shadow for depth */
+}
+
+/* Header */
+header {
+    text-align: center; /* Center the header */
+}
+
+header h1 {
+    font-size: 2.5rem; /* Increased font size */
+    font-weight: 700; /* Bolder font weight */
+    margin-bottom: 20px;
+}
+
+/* Input Section */
+.input-section {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input-section input {
+    border: 2px solid #007BFF; /* Border color */
+    border-radius: 0.5rem;
+    padding: 10px;
+    flex: 1; /* Make input take remaining space */
+    margin-right: 10px;
+    font-size: 1.2rem;
+    transition: border-color 0.3s ease; /* Transition for focus effect */
+}
+
+.input-section input:focus {
+    border-color: #0056b3; /* Darker border on focus */
+    outline: none; /* Remove outline */
+}
+
+/* Button Styles */
+.btn {
+    background-color: #28a745; /* Default green color */
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transition effect */
+    font-size: 1rem;
+}
+
+.btn:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+.btn-error {
+    background-color: #dc3545; /* Red color for delete */
+}
+
+.btn-error:hover {
+    background-color: #c82333; /* Darker red on hover */
+}
+
+/* Filter and Todos List */
+.todos-filter, .filters {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 15px 0;
+}
+
+.todos-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-height: 60vh; /* Limited height */
+    overflow-y: auto; /* Scrollable if content exceeds */
+    border-radius: 10px; /* Rounded corners */
+    padding: 10px;
+    background-color: #ffffff; /* White background for list */
+}
+
+.todo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f9fa; /* Light grey background */
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease; /* Transition effect */
+}
+
+.todo-item:hover {
+    background-color: #e9ecef; /* Darker grey on hover */
+}
+
+/* Line-through for completed tasks */
+.line {
+    text-decoration: line-through;
+    color: #6c757d; /* Grey color for completed text */
+}
+
+/* Dropdown Styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: #007BFF; /* Button color */
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #0056b3; /* Darker blue on dropdown hover */
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 530px) {
+    .container {
+        margin: 0 10px;
+        padding: 15px;
+        max-width: 95%; /* Adjust max-width for smaller screens */
+    }
+    header h1 {
+        font-size: 2rem; /* Smaller font size for header */
+    }
+    .input-section input {
+        font-size: 1rem; /* Smaller input text size */
+    }
+    .btn {
+        padding: 8px; /* Smaller padding for buttons */
+    }
+}
